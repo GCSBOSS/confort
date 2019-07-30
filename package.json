@@ -1,0 +1,36 @@
+{
+  "name": "confort",
+  "version": "0.1.0",
+  "description": "A library for incrementally build config objects through layering config files in many formats.",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "mocha -b --no-diff test/*.js",
+    "coverage": "nyc -r html -r text-summary mocha -b --no-diff test/*.js"
+  },
+  "keywords": [
+    "conf",
+    "file",
+    "json",
+    "yaml",
+    "toml",
+    "parse",
+    "layer",
+    "env",
+    "watch",
+    "live",
+    "reload"
+  ],
+  "author": "Guilherme C. Souza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/GCSBOSS/confort/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/GCSBOSS/confort.git"
+  },
+  "dependencies": {
+    "toml": "^3.0.0",
+    "yaml": "^1.6.0"
+  }
+}
