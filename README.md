@@ -3,11 +3,11 @@
 A library for incrementaly build config objects through layering config files in many formats.
 Check out the features:
 
-- Support native objects directly
+- Support native objects input directly
 - Load config files
 - Merge configs chronologically
 - Option to watch changes in loaded config files
-- Supported formats so far: TOML, JSON and YAML
+- Supported formats so far: TOML, JSON, CSON and YAML
 
 ## Get Started
 
