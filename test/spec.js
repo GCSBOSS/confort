@@ -64,6 +64,14 @@ describe('Confort', function(){
             assert.strictEqual(conf.object.key, 'value');
         });
 
+        it('Should merge objects instead of just replacing', () => {
+            let conf = new Confort({ key: { a: 'b', e: [ 0 ] } });
+            conf.addLayer({ key: { c: 'd', e: [ 1 ] } });
+            assert.strictEqual(conf.object.key.a, 'b');
+            assert.strictEqual(conf.object.key.c, 'd');
+            assert.strictEqual(conf.object.key.e[0], 1);
+        });
+
         it('Should load conf file when path is specified', () => {
             let conf = new Confort('./test/res/conf.toml');
             assert.strictEqual(conf.object.key, 'value');
