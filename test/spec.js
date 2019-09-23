@@ -30,6 +30,11 @@ describe('Conf Loader', () => {
         let obj = loadConf('./test/res/conf.json');
         assert.strictEqual(obj.key, 'value');
     });
+
+    it('Should properly load an CSON file and generate an object', () => {
+        let obj = loadConf('./test/res/conf.cson');
+        assert.strictEqual(obj.key, 'value');
+    });
 });
 
 describe('Confort', function(){
@@ -62,6 +67,14 @@ describe('Confort', function(){
             let conf = new Confort({ key: 'value' });
             conf.addLayer({ newKey: 'valu3' });
             assert.strictEqual(conf.object.key, 'value');
+        });
+
+        it('Should merge objects instead of just replacing', () => {
+            let conf = new Confort({ key: { a: 'b', e: [ 0 ] } });
+            conf.addLayer({ key: { c: 'd', e: [ 1 ] } });
+            assert.strictEqual(conf.object.key.a, 'b');
+            assert.strictEqual(conf.object.key.c, 'd');
+            assert.strictEqual(conf.object.key.e[0], 1);
         });
 
         it('Should load conf file when path is specified', () => {

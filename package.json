@@ -30,6 +30,8 @@
     "url": "git+https://gitlab.com/GCSBOSS/confort.git"
   },
   "dependencies": {
+    "cson-parser": "^4.0.2",
+    "deepmerge": "^4.0.0",
     "toml": "^3.0.0",
     "yaml": "^1.6.0"
   }
