@@ -1,6 +1,6 @@
 {
   "name": "confort",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A library for incrementally build config objects through layering config files in many formats.",
   "main": "lib/main.js",
   "scripts": {
