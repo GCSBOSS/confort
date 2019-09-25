@@ -77,6 +77,14 @@ describe('Confort', function(){
             assert.strictEqual(conf.object.key.e[0], 1);
         });
 
+        it('Should replace objects with a class other than Object', () => {
+            class Foo{ constructor(){ this.a = 'foo'; } }
+            let conf = new Confort({ key: { a: 'a', b: 'bar' } });
+            conf.addLayer({ key: new Foo() });
+            assert.strictEqual(conf.object.key.a, 'foo');
+            assert.strictEqual(typeof conf.object.key.b, 'undefined');
+        });
+
         it('Should load conf file when path is specified', () => {
             let conf = new Confort('./test/res/conf.toml');
             assert.strictEqual(conf.object.key, 'value');
