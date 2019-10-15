@@ -77,6 +77,15 @@ describe('Confort', function(){
             assert.strictEqual(conf.object.key.e[0], 1);
         });
 
+        it('Should merge objects with null prototype', () => {
+            let o = Object.create(null);
+            o.b = 2;
+            let conf = new Confort(o);
+            conf.addLayer({ a: 1 });
+            assert.strictEqual(conf.object.a, 1);
+            assert.strictEqual(conf.object.b, 2);
+        });
+
         it('Should replace objects with a class other than Object', () => {
             class Foo{ constructor(){ this.a = 'foo'; } }
             let conf = new Confort({ key: { a: 'a', b: 'bar' } });
