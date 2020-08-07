@@ -7,11 +7,13 @@ Check out the features:
 - Load config files
 - Merge configs chronologically
 - Option to watch changes in loaded config files
-- Supported formats so far: TOML, JSON, CSON and YAML
+- Supported formats so far: TOML (`toml`), JSON, CSON (`cson-parser`) and YAML (`yaml`)
 
 ## Get Started
 
 Install with: `npm i -P confort`
+
+> You also need to install the lib for parsing the type of file you mean to use like: `npm i toml` for parsing TOML
 
 In your code:
 

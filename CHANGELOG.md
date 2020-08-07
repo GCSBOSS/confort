@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.4] - 2020-08-07
+
+### Changed
+- no longer includes supported modules as dependencies. Requires the depedent to install the desired modules directly
+
 ## [v0.1.3] - 2019-10-15
 
 ### Fixed
@@ -30,3 +35,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.1.1]: https://gitlab.com/GCSBOSS/confort/-/tags/v0.1.1
 [v0.1.2]: https://gitlab.com/GCSBOSS/confort/-/tags/v0.1.2
 [v0.1.3]: https://gitlab.com/GCSBOSS/confort/-/tags/v0.1.3
+[v0.1.4]: https://gitlab.com/GCSBOSS/confort/-/tags/v0.1.4
