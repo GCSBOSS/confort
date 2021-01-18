@@ -12,8 +12,9 @@ sast:
     SAST_EXCLUDED_PATHS: test/**
 
 code_quality:
-  except:
-    - tags
+  rules:
+    - if: '$CI_COMMIT_TAG'
+    - when: never
 
 lint-node:
  image: node

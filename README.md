@@ -6,7 +6,7 @@ Check out the features:
 - Support native objects input directly
 - Load config files
 - Merge configs chronologically
-- Supported formats so far: TOML (`toml`), JSON, CSON (`cson-parser`) and YAML (`yaml`)
+- Supported formats so far: TOML (`toml`), JSON and YAML (`yaml`)
 - Available in the Deno ecosystem (see directory `/deno`)
 
 ## Get Started on NodeJS
