@@ -6,8 +6,8 @@ Check out the features:
 - Support native objects input directly
 - Load config files
 - Merge configs chronologically
-- Option to watch changes in loaded config files
-- Supported formats so far: TOML, JSON, and YAML
+- Supported formats so far: TOML (`toml`), JSON, CSON (`cson-parser`) and YAML (`yaml`)
+- Available in the Deno ecosystem (see directory `/deno`)
 
 ## Get Started
 
@@ -18,31 +18,17 @@ Install with: `npm i -P confort`
 In your code:
 
 ```js
-const Confort = require('confort');
+const confort = require('confort');
 
 // Constructor Forms
-let conf = new Confort(); // Empty conf object
-let conf = new Confort({ key: 'value', key2: 'value2' }); // Initial conf from objects
-let conf = new Confort('./my-file.toml'); // Initial conf from file
+let conf = confort(); // Empty conf object
+let conf = confort({ key: 'value', key2: 'value2' }); // Initial conf from objects
+let conf = confort('./my-file.toml'); // Initial conf from file
 
 // Adding incremental config layer
-conf.addLayer({ key: 'value' });
-conf.object; // => { key: 'value' }
-conf.addLayer({ key: 'newValue', otherKey: 'value' });
-conf.object; // => { key: 'newValue', otherKey: 'value' }
-conf.addLayer('./my-file.yml');
-
-// Reset the configuration for reuse
-conf.clear();
-
-// Reset the conf and reapply all layers effectively reading changes in files
-conf.reload();
-
-// Enable auto reload when changes in loaded conf files happen
-conf.liveReload = true;
-
-// Disables auto reload
-conf.liveReload = false;
+let c1 = confort(c1, { key: 'value' }); // => { key: 'value' }
+c1 = confort(c1, { key: 'newValue', otherKey: 'value' }); // => { key: 'newValue', otherKey: 'value' }
+c1 = confort(c1, './my-file.yml');
 ```
 
 ## Reporting Bugs

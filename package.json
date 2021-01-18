@@ -15,10 +15,7 @@
     "toml",
     "parse",
     "layer",
-    "env",
-    "watch",
-    "live",
-    "reload"
+    "env"
   ],
   "author": "Guilherme C. Souza",
   "license": "MIT",
@@ -29,11 +26,9 @@
     "type": "git",
     "url": "git+https://gitlab.com/GCSBOSS/confort.git"
   },
-  "dependencies": {
-    "deepmerge": "^4.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "toml": "^3.0.0",
-    "yaml": "^1.7.0"
+    "yaml": "^1.10.0"
   }
 }
