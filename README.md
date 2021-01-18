@@ -9,7 +9,7 @@ Check out the features:
 - Supported formats so far: TOML (`toml`), JSON, CSON (`cson-parser`) and YAML (`yaml`)
 - Available in the Deno ecosystem (see directory `/deno`)
 
-## Get Started
+## Get Started on NodeJS
 
 Install with: `npm i -P confort`
 
@@ -19,6 +19,22 @@ In your code:
 
 ```js
 const confort = require('confort');
+
+// Constructor Forms
+let conf = confort(); // Empty conf object
+let conf = confort({ key: 'value', key2: 'value2' }); // Initial conf from objects
+let conf = confort('./my-file.toml'); // Initial conf from file
+
+// Adding incremental config layer
+let c1 = confort(c1, { key: 'value' }); // => { key: 'value' }
+c1 = confort(c1, { key: 'newValue', otherKey: 'value' }); // => { key: 'newValue', otherKey: 'value' }
+c1 = confort(c1, './my-file.yml');
+```
+
+## Get Started on [Deno](https://deno.land/)
+
+```js
+import confort from 'https://deno.land/x/confort@0.2.0/deno/main.js'
 
 // Constructor Forms
 let conf = confort(); // Empty conf object
