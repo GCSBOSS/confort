@@ -11,6 +11,10 @@ sast:
   variables:
     SAST_EXCLUDED_PATHS: test/**
 
+code_quality:
+  except:
+    - tags
+
 lint-node:
  image: node
  stage: test
