@@ -31,10 +31,6 @@ describe('Conf Loader', () => {
         assert.strictEqual(obj.key, 'value');
     });
 
-    it('Should properly load an CSON file and generate an object', () => {
-        let obj = loadConf('./test/res/conf.cson');
-        assert.strictEqual(obj.key, 'value');
-    });
 });
 
 describe('Confort', function(){

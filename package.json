@@ -33,7 +33,6 @@
     "deepmerge": "^4.0.0"
   },
   "devDependencies": {
-    "cson-parser": "^4.0.2",
     "toml": "^3.0.0",
     "yaml": "^1.7.0"
   }

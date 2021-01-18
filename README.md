@@ -7,7 +7,7 @@ Check out the features:
 - Load config files
 - Merge configs chronologically
 - Option to watch changes in loaded config files
-- Supported formats so far: TOML (`toml`), JSON, CSON (`cson-parser`) and YAML (`yaml`)
+- Supported formats so far: TOML, JSON, and YAML
 
 ## Get Started
 
